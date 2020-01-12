@@ -1,0 +1,13 @@
+form {
+  .form-control {
+    &:hover,
+    &:focus {
+      border-color: #b37072;
+      box-shadow: 0 0 0 0.2rem rgba($color: $principal, $alpha: 0.5);
+    }
+  }
+  .btn-fitcard {
+    border: 0;
+    margin-top: 25px;
+  }
+}

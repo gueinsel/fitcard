@@ -1,0 +1,41 @@
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+$principal: #b31217;
+$secundaria: #e52d27;
+$fonte: #8c939d;
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+body {
+  position: relative;
+  color: $fonte;
+  font-family: "Open Sans", sans-serif;
+  @include font-size(16px);
+}
+.link {
+  color: $principal;
+  &:hover {
+    color: $secundaria;
+  }
+}
+.btn-fitcard {
+  border-radius: 16px;
+  background: linear-gradient(to right, $secundaria, $principal 75%);
+  color: white;
+  padding: 10px 25px;
+  &:hover {
+    color: white;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+@import "header", "footer", "form", "tabela";
